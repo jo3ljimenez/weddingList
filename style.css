@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url(fonts/MontserratAlternates-Regular.otf) format('opentype');
+    font-family: 'Quicksand';
+    src: url(fonts/Quicksand-Regular.otf) format('opentype');
 }
 
 body{
@@ -64,12 +64,12 @@ ul{
 }
 
 .place_description h1{
-    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Quicksand';
     font-weight: bolder;
 }
 
 .place_description h2, .location_place h2{
-    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Quicksand';
     font-weight: normal;  
 }
 
@@ -77,13 +77,13 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Quicksand';
 }
 
 .event_day, .event_hour{
     flex: 1;
     text-align: center;
-    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;    
+    font-family: 'Quicksand';    
 }
 
 .event_day h2, .event_hour h2{
@@ -175,7 +175,7 @@ ul{
     }
 
     .middle_description h2{
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 18px;
     }
 
@@ -204,11 +204,11 @@ ul{
         font-weight: bold;
         font-size: 20px;
         text-align: center;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
     }
     
     .timer_content h4 {
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 12px;
         margin: 0px;
     }
@@ -229,7 +229,7 @@ ul{
     .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 15px;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif; 
+        font-family: 'Quicksand'; 
     }
     
     .event_day h2, .event_hour h2{
@@ -273,7 +273,7 @@ ul{
     }
 
     .middle_description h2{
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 25px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -304,11 +304,11 @@ ul{
         font-weight: bold;
         font-size: 30px;
         text-align: center;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
     }
     
     .timer_content h4 {
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 16px;
         color: rgba(0, 0, 0, 0.842);
         margin: 0px;
@@ -330,7 +330,7 @@ ul{
     .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 20px;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-weight: normal;  
     }
 
@@ -375,7 +375,7 @@ ul{
     }
 
     .middle_description h2{
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 30px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -405,11 +405,11 @@ ul{
         font-weight: bold;
         font-size: 40px;
         text-align: center;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
     }
     
     .timer_content h4 {
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 20px;
         color: rgba(0, 0, 0, 0.842);
         margin: 0px;
@@ -431,7 +431,7 @@ ul{
     .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 30px;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-weight: normal;  
     }
 
@@ -475,7 +475,7 @@ ul{
     }
 
     .middle_description h2{
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 50px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -506,11 +506,11 @@ ul{
         font-weight: bold;
         font-size: 50px;
         text-align: center;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
     }
     
     .timer_content h4 {
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 28px;
         color: rgba(0, 0, 0, 0.842);
         margin: 0px;
@@ -532,7 +532,7 @@ ul{
     .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 40px;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-weight: normal;  
     }
 
@@ -577,7 +577,7 @@ ul{
     }
 
     .middle_description h2{
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 70px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -608,11 +608,11 @@ ul{
         font-weight: bold;
         font-size: 70px;
         text-align: center;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
     }
     
     .timer_content h4 {
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-size: 35px;
         color: rgba(0, 0, 0, 0.842);
         margin: 0px;
@@ -634,7 +634,7 @@ ul{
     .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 60px;
-        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Quicksand';
         font-weight: normal;  
     }
 
