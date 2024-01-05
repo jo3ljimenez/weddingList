@@ -58,7 +58,7 @@ ul{
 }
 
 /* Middle Section */
-.middle_place, .middel_celebration_place{
+.middle_place, .location_place{
     text-align: center;
     padding: 10px;
 }
@@ -68,12 +68,12 @@ ul{
     font-weight: bolder;
 }
 
-.place_description h2, .middel_celebration_place h2{
+.place_description h2, .location_place h2{
     font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;  
 }
 
-.middel_celebration_date{
+.location_date{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,6 +102,7 @@ ul{
     border: none;
     margin: 20px 0px;
     cursor: pointer;
+    margin: 60px 0px 0px 0px;
     transition: 0.3s;
 }
 
@@ -109,6 +110,45 @@ ul{
     background-color: rgb(114, 108, 87);
 }
 
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.gallery_photo{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 4s ease-in-out;
+}
+
+.fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .fullscreen-image.show {
+    opacity: 1;
+  }
+
+  .fullscreen-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 
 /* Resolucion maxima de 360 pixeles */
 @media screen and (max-width: 360px){
@@ -184,7 +224,7 @@ ul{
         font-size: 30px;
     }
     
-    .place_description h2, .middel_celebration_place h2{
+    .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 15px;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif; 
@@ -202,6 +242,7 @@ ul{
     .button {
         width: 60%;
         height: 40px;
+        font-size: 14px;
     }
 
 }
@@ -284,7 +325,7 @@ ul{
         font-size: 40px;
     }
     
-    .place_description h2, .middel_celebration_place h2{
+    .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 20px;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -303,6 +344,7 @@ ul{
     .button {
         width: 60%;
         height: 45px;
+        font-size: 16px;
     }
     
 }
@@ -385,7 +427,7 @@ ul{
         font-size: 50px;
     }
     
-    .place_description h2, .middel_celebration_place h2{
+    .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 30px;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -404,6 +446,7 @@ ul{
     .button {
         width: 60%;
         height: 50px;
+        font-size: 18px;
     }
 }
 
@@ -485,7 +528,7 @@ ul{
         font-size: 70px;
     }
     
-    .place_description h2, .middel_celebration_place h2{
+    .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 40px;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -504,6 +547,7 @@ ul{
     .button {
         width: 60%;
         height: 55px;
+        font-size: 20px;
     }
     
 }
@@ -586,7 +630,7 @@ ul{
         font-size: 100px;
     }
     
-    .place_description h2, .middel_celebration_place h2{
+    .place_description h2, .location_place h2{
         margin: 10px; 
         font-size: 60px;
         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -605,5 +649,6 @@ ul{
     .button {
         width: 60%;
         height: 60px;
+        font-size: 24px;
     }
 }

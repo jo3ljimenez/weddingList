@@ -9,15 +9,18 @@
 <body>
     <ul>
         <li class="section">
+
             <div class="top_section">
-                <img class="top_image" src="images/top.jpg" alt="">
+                <img class="top_image" src="images/_MG_7209.jpg" alt="">
                 <div class="top_text">
-                    <h1>Alejandra y Joel</h1>
+                    <h1>Nos Casamos!</h1>
                 </div>
             </div>
+        
         </li>
 
         <li class="section">
+
             <div class="middle_section">
                 
                 <!-- Estas invitado -->
@@ -54,37 +57,97 @@
                     </div>
                 </div>
 
-                <!-- Lugar -->
+                <!-- Lugar ceremonia -->
                 <div class="middle_place">
                     <div class="place_image">
                         <img src="images/anillos-de-boda.png" alt="">
                     </div>
                     <div class="place_description">
-                        <h1>Celebracion</h1>
-                        <h2>San Blas el fuerte sinaloa</h2>
-                        <h2>Te esperamos el</h2>
+                        <h1>Ceremonia</h1>
+                        <h2>San Blas, El Fuerte Sinaloa</h2>
                     </div>
                 </div>
 
                 <!-- Fecha Ceremonia -->
-                <div class="middel_celebration_date">
+                <div class="location_date">
                     <div class="event_day">
-                        <h2 id="event_day">9 MZO</h2>
+                        <h2 id="event_day">9 Marzo</h2>
                     </div>
                     <div class="celebration_separator"></div>
                     <div class="event_hour">
-                        <h2 id="event_hour">18:00 PM</h2>
+                        <h2 id="event_hour">16:00 PM</h2>
                     </div>
                 </div>
 
                 <!-- Ubicacion Ceremonia -->
-                <div class="middel_celebration_place">
+                <div class="location_place">
                     <h2>El puente colorado</h2>
-                    <h2>San Blas Sinaloa</h2>
+                </div>
+
+                <!-- Lugar Celebracion -->
+                <div class="middle_place">
+                    <div class="place_image">
+                        <img src="images/vino.png" alt="">
+                    </div>
+                    <div class="place_description">
+                        <h1>Celebracion</h1>
+                        <h2>San Blas, El Fuerte Sinaloa</h2>
+                    </div>
+                </div>
+
+                <!-- Fecha Celebracion -->
+                <div class="location_date">
+                    <div class="event_day">
+                        <h2 id="event_day">9 Marzo</h2>
+                    </div>
+                    <div class="celebration_separator"></div>
+                    <div class="event_hour">
+                        <h2 id="event_hour">17:00 PM</h2>
+                    </div>
+                </div>
+
+                <!-- Ubicacion Celebracion -->
+                <div class="location_place">
+                    <h2>El puente colorado</h2>
                     <button class="button" id="open_map_button" onclick="openGoogleMaps()">Ver unicacion</button>
                 </div>
-                <div>Etiqueta</div>
+
+                <!-- Codigo vestimenta -->
+                <div class="middle_place">
+                    <div class="place_image">
+                        <img src="images/ropa.png" alt="">
+                    </div>
+                    <div class="place_description">
+                        <h1>Dresscode</h1>
+                        <h2>Formal</h2>
+                    </div>
+                </div>
+
+                <!-- Nosotros -->
+                <div class="middle_place">
+                    <div class="place_description">
+                        <h1>Nosotros</h1>
+
+                        <div class="fullscreen-image" id="fullscreenImage">
+                            <img id="fullscreenImageContent" src="" alt="Imagen en pantalla completa">
+                        </div>
+
+                        <div class="gallery">
+                            <img class="gallery_photo" src="images/_MG_6982.jpg" alt="photo1" onclick="showFullScreen('images/_MG_6982.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7000.jpg" alt="photo2" onclick="showFullScreen('images/_MG_7000.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7116.jpg" alt="photo3" onclick="showFullScreen('images/_MG_7116.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7124.jpg" alt="photo4" onclick="showFullScreen('images/_MG_7124.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7162.jpg" alt="photo5" onclick="showFullScreen('images/_MG_7162.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7283.jpg" alt="photo6" onclick="showFullScreen('images/_MG_7283.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7297.jpg" alt="photo7" onclick="showFullScreen('images/_MG_7297.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7312.jpg" alt="photo8" onclick="showFullScreen('images/_MG_7312.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7317.jpg" alt="photo9" onclick="showFullScreen('images/_MG_7317.jpg')">
+                            <img class="gallery_photo" src="images/_MG_7337.jpg" alt="photo10" onclick="showFullScreen('images/_MG_7337.jpg')">
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </li>
 
         <li class="section">
@@ -94,5 +157,6 @@
 
     <script src="scripts/timer.js"></script>
     <script src="scripts/viewLocation.js"></script>
+    <script src="scripts/fullScreen.js"></script>
 </body>
 </html>
