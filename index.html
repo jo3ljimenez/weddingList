@@ -30,33 +30,59 @@
                 <div class="middle_timer">
                     <div class="timer_content">
                         <div class="timer_circle">
-                            <h2 id="days">10</h2>
+                            <h2 id="days">0</h2>
                         </div>
                         <h4>Dias</h4>
                     </div>
                     <div class="timer_content">
                         <div class="timer_circle">
-                            <h2 id="hours">14</h2>
+                            <h2 id="hours">0</h2>
                         </div>
                         <h4>Horas</h4>
                     </div>
                     <div class="timer_content">
                         <div class="timer_circle">
-                            <h2 id="minutes">52</h2>
+                            <h2 id="minutes">0</h2>
                         </div>
                         <h4>Minutos</h4>
                     </div>
                     <div class="timer_content">
                         <div class="timer_circle">
-                            <h2 id="seconds">07</h2>
+                            <h2 id="seconds">0</h2>
                         </div>
                         <h4>Horas</h4>
                     </div>
                 </div>
 
-                <div>Lugar</div>
-                <div>Fecha</div>
-                <div>Ubicacion</div>
+                <!-- Lugar -->
+                <div class="middle_place">
+                    <div class="place_image">
+                        <img src="images/anillos-de-boda.png" alt="">
+                    </div>
+                    <div class="place_description">
+                        <h1>Celebracion</h1>
+                        <h2>San Blas el fuerte sinaloa</h2>
+                        <h2>Te esperamos el</h2>
+                    </div>
+                </div>
+
+                <!-- Fecha Ceremonia -->
+                <div class="middel_celebration_date">
+                    <div class="event_day">
+                        <h2 id="event_day">9 MZO</h2>
+                    </div>
+                    <div class="celebration_separator"></div>
+                    <div class="event_hour">
+                        <h2 id="event_hour">18:00 PM</h2>
+                    </div>
+                </div>
+
+                <!-- Ubicacion Ceremonia -->
+                <div class="middel_celebration_place">
+                    <h2>El puente colorado</h2>
+                    <h2>San Blas Sinaloa</h2>
+                    <button class="button" id="open_map_button" onclick="openGoogleMaps()">Ver unicacion</button>
+                </div>
                 <div>Etiqueta</div>
             </div>
         </li>
@@ -67,5 +93,6 @@
     </ul>
 
     <script src="scripts/timer.js"></script>
+    <script src="scripts/viewLocation.js"></script>
 </body>
 </html>
