@@ -114,6 +114,9 @@ ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+    margin: 50px 0px 0px 0px;
+    padding: 1px 0px ; 
+    background-color: #c2b68d;
 }
 
 .gallery_photo{
@@ -193,8 +196,7 @@ ul{
         border-radius: 50%;
         background-color: #c2b68d;
         align-items: center;
-        justify-content: center;
-    
+        justify-content: center;;
     }
     
     .timer_circle h2{
@@ -395,8 +397,7 @@ ul{
         border-radius: 50%;
         background-color: #c2b68d;
         align-items: center;
-        justify-content: center;
-    
+        justify-content: center;    
     }
     
     .timer_circle h2{
