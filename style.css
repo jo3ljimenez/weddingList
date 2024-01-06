@@ -153,6 +153,21 @@ ul{
     max-height: 100%;
   }
 
+  .data_gif{
+    display: grid;
+    padding: 1px 0px ; 
+    background-color: #c2b68d;
+    text-align: center;
+    font-family: 'Quicksand';
+    border-radius: 30px;
+    color: white;
+}
+
+
+.data_gif h2{
+    margin: 0px;
+}
+
 /* Resolucion maxima de 360 pixeles */
 @media screen and (max-width: 360px){
     .top_text{
@@ -177,6 +192,13 @@ ul{
     .middle_description h2{
         font-family: 'Quicksand';
         font-size: 18px;
+    }
+
+    .data_gif h1{
+        font-size: 30px;;
+    }
+    .data_gif h2{
+        font-size: 15px;
     }
 
     .middle_timer{
@@ -348,6 +370,13 @@ ul{
         height: 45px;
         font-size: 16px;
     }
+
+    .data_gif h1{
+        font-size: 40px;;
+    }
+    .data_gif h2{
+        font-size: 20px;
+    }
     
 }
 
@@ -448,6 +477,13 @@ ul{
         width: 60%;
         height: 50px;
         font-size: 18px;
+    }
+
+    .data_gif h1{
+        font-size: 50px;;
+    }
+    .data_gif h2{
+        font-size: 30px;
     }
 }
 
@@ -550,6 +586,13 @@ ul{
         height: 55px;
         font-size: 20px;
     }
+
+    .data_gif h1{
+        font-size: 70px;;
+    }
+    .data_gif h2{
+        font-size: 40px;
+    }
     
 }
 
@@ -651,5 +694,12 @@ ul{
         width: 60%;
         height: 60px;
         font-size: 24px;
+    }
+
+    .data_gif h1{
+        font-size: 100px;;
+    }
+    .data_gif h2{
+        font-size: 60px;
     }
 }
