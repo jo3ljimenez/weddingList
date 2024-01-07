@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <ul>
@@ -26,6 +27,13 @@
                 <!-- Fullscreen contenedor -->
                 <div class="fullscreen-image" id="fullscreenImage">
                     <img id="fullscreenImageContent" src="" alt="Imagen en pantalla completa">
+                </div>
+
+                <!-- Musica -->
+                <div class="main_music">
+                    <audio controls autoplay>
+                        <source src="https://jo3ljimenez.github.io/wedding_invitation/audio/AccidentallyInLove" type="audio/mp3">
+                    </audio>
                 </div>
 
                 <!-- Estas invitado -->
@@ -114,7 +122,7 @@
                     </div>
                     <div class="celebration_separator"></div>
                     <div class="event_hour">
-                        <h2 id="event_hour">17:00 PM</h2>
+                        <h2 id="event_hour">18:00 PM</h2>
                     </div>
                 </div>
 
@@ -140,19 +148,19 @@
                     </div>
                     <div class="place_description">
                         <h1>Rigurosa etiqueta</h1>
-                        <h2>Por respeto a la novia, no usar los siguientes colores</h2>
+                        <h2>Por respeto a la novia, <strong>no usar</strong> los siguientes colores</h2>
                         <div class="middle_timer">
                             <div class="timer_content">
-                                <div class="timer_circle" style="background-color: #FFFFFF; box-shadow: 0px 0px 3px 0px;">
-                                </div>
+                                <div class="timer_circle" style="background-color: #FFFFFF; box-shadow: 0px 0px 3px 0px;"></div>
+                                <h2>Blanco</h2>
                             </div>
                             <div class="timer_content">
-                                <div class="timer_circle" style="background-color: #F5F5DC; box-shadow: 0px 0px 3px 0px;">
-                                </div>
+                                <div class="timer_circle" style="background-color: #F5F5DC; box-shadow: 0px 0px 3px 0px;"></div>
+                                <h2>Champagne</h2>
                             </div>
                             <div class="timer_content">
-                                <div class="timer_circle" style="background-color: #F7E7CE; box-shadow: 0px 0px 3px 0px;">
-                                </div>
+                                <div class="timer_circle" style="background-color: #F7E7CE; box-shadow: 0px 0px 3px 0px;"></div>
+                                <h2>Beige</h2>
                             </div>
                         </div>
                     </div>
@@ -183,7 +191,7 @@
                     <h1>Datos bancarios</h1>
                     <h2>Bancoppel</h2>
                     <h2>Alejandra Lizárraga Higuera</h2>
-                    <h2>1234123412341234</h2>
+                    <h2>4169160842629355</h2>
                     <br>
                     <h2>o</h2>
                     <br>
@@ -191,7 +199,7 @@
                     <br>
                 </div>
 
-                <!-- Ubicacion Celebracion -->
+                <!-- Botones mesa de regalos -->
                 <div class="location_place" >
                     
                     <h2>Mesas de regalos</h2>
@@ -202,8 +210,8 @@
                     <button class="button" id="open_map_button" style="margin: 10px 0px;"
                     onclick="getLiverpoolLink()">Mesa de regalo Liverpool</button>
 
-                    <button class="button" id="open_map_button" style="margin: 10px 0px;"
-                    onclick="getCoppelLink()">Mesa de regalo Coppel</button>
+                    <!-- <button class="button" id="open_map_button" style="margin: 10px 0px;"
+                    onclick="getCoppelLink()">Mesa de regalo Coppel</button> -->
 
                 </div>
 
@@ -213,6 +221,13 @@
                     onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7297.jpg')">
                     <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7312.jpg" alt="" 
                     onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7312.jpg')">
+                </div>
+
+                <!-- Seccion de fotografia -->
+                <div class="middle_place">
+                    <div class="place_image">
+                        <img src="https://jo3ljimenez.github.io/wedding_invitation/images/camara.png" alt="">
+                    </div>
                 </div>
             </div>
 

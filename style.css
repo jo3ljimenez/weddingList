@@ -42,6 +42,11 @@ ul{
     height: 100%;
 }
 
+.main_music {
+    text-align: center;
+    padding-top: 10px;
+}
+
 /* Middle Section */
 .middle_section{
     display: block;
@@ -163,6 +168,13 @@ ul{
     color: white;
 }
 
+.timer_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .data_gif h2{
     margin: 0px;
@@ -205,10 +217,6 @@ ul{
         display: flex;
         justify-content: space-around;
         margin: 40px 0px;
-    }
-    
-    .timer_content{
-        text-align: center;
     }
     
     .timer_circle{
@@ -304,10 +312,6 @@ ul{
         display: flex;
         justify-content: space-around;
         margin: 40px 0px;
-    }
-    
-    .timer_content{
-        text-align: center;
     }
     
     .timer_circle{
@@ -415,10 +419,6 @@ ul{
         margin: 40px 0px;
     }
     
-    .timer_content{
-        text-align: center;
-    }
-    
     .timer_circle{
         display: flex;
         width: 65px;
@@ -520,10 +520,6 @@ ul{
         display: flex;
         justify-content: space-around;
         margin: 40px 0px;
-    }
-    
-    .timer_content{
-        text-align: center;
     }
     
     .timer_circle{
@@ -629,10 +625,6 @@ ul{
         display: flex;
         justify-content: space-around;
         margin: 40px 0px;
-    }
-    
-    .timer_content{
-        text-align: center;
     }
     
     .timer_circle{
