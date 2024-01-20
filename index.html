@@ -14,7 +14,7 @@
             <div class="top_section">
                 <img class="top_image" src="https://jo3ljimenez.github.io/wedding_invitation/images/7209.jpg" alt="">
                 <div class="top_text">
-                    <h1>¡Nos casamos!</h1>
+                    <h1>Alejandra & Joel Isaac</h1>
                 </div>
             </div>
         
@@ -189,13 +189,15 @@
                 <!-- Datos bancarios -->
                 <div class="data_gif" style="margin-top: 0px;">
                     <h1>Datos bancarios</h1>
-                    <h2>Bancoppel</h2>
-                    <h2>Alejandra Lizárraga Higuera</h2>
-                    <h2>4169160842629355</h2>
+                     <div class="data_bankAccount">
+                        <h2>Bancoppel</h2>
+                        <br>
+                        <h2>Alejandra Lizarraga Higuera</h2>
+                        <br>
+                        <h2>4169160842629355</h2>
+                     </div>
                     <br>
-                    <h2>o</h2>
-                    <br>
-                    <h2>En la recepción podrás encontrar un baúl de sobres</h2>
+                    <h2 style="margin: 0px 20px;">O en la recepción podrás encontrar un baúl de sobres</h2>
                     <br>
                 </div>
 
@@ -224,7 +226,7 @@
                 </div>
 
                 <!-- Seccion de fotografia -->
-                <div class="middle_place" style="background-color: #c2b68d;" >
+                <div class="middle_place" style="background-color: #8f8279;" >
                     <div class="place_image">
                         <img src="https://jo3ljimenez.github.io/wedding_invitation/images/camara.png" alt="">
                     </div>
@@ -236,10 +238,15 @@
                         <button class="button" id="" style="border: solid 1px white; margin: 0px;"
                         onclick="">Subir fotos</button>
 
-                        <button class="button" id="" style="border: solid 1px white; margin: 30px;"
-                        onclick="">Ver galeria</button>
+                        <button class="button" id="  " style="border: solid 1px white; margin: 30px;">Ver galeria</button>
                     </div>
                 </div>
+
+                <!-- Galeria de imagenes -->
+                <div id="carousel" class="carousel">
+                    <h1>hola</h1>
+                </div>
+
             </div>
 
         </li>
@@ -249,6 +256,14 @@
         </li>
     </ul>
 
+    <!-- Incluye la biblioteca de Cloudinary -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.12.0/cloudinary-core-shrinkwrap.min.js"></script>
+    <!-- Incluye jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Incluye la biblioteca Slick para el carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="scripts/weddingGallery.js"></script>
     <script src="scripts/timer.js"></script>
     <script src="scripts/sources.js"></script>
     <script src="scripts/fullScreen.js"></script>

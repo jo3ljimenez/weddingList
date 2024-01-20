@@ -1,7 +1,7 @@
 /* Fuentes */
 @font-face {
-    font-family: 'Cursive';
-    src: url(fonts/DancingScript-Regular.otf) format('opentype');
+    font-family: 'Abhaya';
+    src: url(fonts/AbhayaLibre-Regular.ttf) format('opentype');
 }
 
 @font-face {
@@ -27,7 +27,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fdf7f7;
+    background-color: white;
     object-fit: cover;
 }
 
@@ -100,7 +100,7 @@ ul{
 }
 
 .button {
-    background-color: #c2b68d;
+    background-color: #8f8279;
     color: white;
     font-weight: bolder;
     border-radius: 3px;
@@ -121,7 +121,7 @@ ul{
     gap: 5px;
     margin: 50px 0px 0px 0px;
     padding: 1px 0px ; 
-    background-color: #c2b68d;
+    background-color: #8f8279;
 }
 
 .gallery_photo{
@@ -161,10 +161,10 @@ ul{
   .data_gif{
     display: grid;
     padding: 1px 0px ; 
-    background-color: #c2b68d;
+    background-color: #8f8279;
     text-align: center;
+    place-items: center;
     font-family: 'Quicksand';
-    border-radius: 30px;
     color: white;
 }
 
@@ -180,6 +180,22 @@ ul{
     margin: 0px;
 }
 
+.timer_circle{
+    background-color: #8f8279;
+}
+
+.data_bankAccount{
+    align-content: center;
+    border: solid 1px white;
+    width: max-content;
+    padding: 10px 10px 20px 10px;
+}
+
+/* Carousel */
+.hide {
+    display: none;
+}
+
 /* Resolucion maxima de 360 pixeles */
 @media screen and (max-width: 360px){
     .top_text{
@@ -188,7 +204,7 @@ ul{
         left: 0px;
         width: 100%;
         text-align: center;
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         color: #fdf7f7;
         /* text-shadow: 0px 0px 10px #000; */
@@ -197,7 +213,7 @@ ul{
 
     /* Middle Section */
     .middle_description h1{
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 40px;
     }
 
@@ -224,7 +240,6 @@ ul{
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: #c2b68d;
         align-items: center;
         justify-content: center;;
     }
@@ -288,7 +303,7 @@ ul{
         left: 0px;
         width: 100%;
         text-align: center;
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         color: #fdf7f7;
         /* text-shadow: 0px 0px 10px #000; */
@@ -297,7 +312,7 @@ ul{
 
     /* Middle Section */
     .middle_description h1{
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 50px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -319,7 +334,6 @@ ul{
         width: 55px;
         height: 55px;
         border-radius: 50%;
-        background-color: #c2b68d;
         align-items: center;
         justify-content: center;
     
@@ -393,7 +407,7 @@ ul{
         left: 0px;
         width: 100%;
         text-align: center;
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         color: #fdf7f7;
         /* text-shadow: 0px 0px 10px #000; */
@@ -402,7 +416,7 @@ ul{
 
     /* Middle Section */
     .middle_description h1{
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 60px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -424,7 +438,6 @@ ul{
         width: 65px;
         height: 65px;
         border-radius: 50%;
-        background-color: #c2b68d;
         align-items: center;
         justify-content: center;    
     }
@@ -496,7 +509,7 @@ ul{
         left: 0px;
         width: 100%;
         text-align: center;
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         color: #fdf7f7;
         /* text-shadow: 0px 0px 10px #000; */
@@ -505,7 +518,7 @@ ul{
 
     /* Middle Section */
     .middle_description h1{
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 90px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -527,7 +540,6 @@ ul{
         width: 85px;
         height: 85px;
         border-radius: 50%;
-        background-color: #c2b68d;
         align-items: center;
         justify-content: center;
     
@@ -601,7 +613,7 @@ ul{
         left: 0px;
         width: 100%;
         text-align: center;
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         color: #fdf7f7;
         /* text-shadow: 0px 0px 10px #000; */
@@ -610,7 +622,7 @@ ul{
 
     /* Middle Section */
     .middle_description h1{
-        font-family: 'Cursive', Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
         font-size: 140px;
         color: rgba(0, 0, 0, 0.842);
     }
@@ -632,7 +644,6 @@ ul{
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        background-color: #c2b68d;
         align-items: center;
         justify-content: center;
     
