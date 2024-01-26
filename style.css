@@ -99,6 +99,24 @@ ul{
     background-color: rgb(131, 131, 131);
 }
 
+input{
+    width: 90%;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    font-size: large;
+    height: 40px;
+}
+
+select{
+    width: 92%;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    background-color: white;
+    color: gray;
+    font-size: large;
+    height: 40px;
+}
+
 .button {
     background-color: #8f8279;
     color: white;
@@ -223,7 +241,7 @@ ul{
     }
 
     .data_gif h1{
-        font-size: 30px;;
+        font-size: 30px;
     }
     .data_gif h2{
         font-size: 15px;

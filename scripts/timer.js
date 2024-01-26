@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function calcualteWeddingDay() {
     // Set the date we're counting down to
     let countDownDate = new Date("March 9, 2024 00:00:00").getTime();
 
@@ -29,4 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("timer").innerHTML = "Weeding Day! :D";
         }
     }, 1000);
-});
+}
+
+module.exports = calcualteWeddingDay;

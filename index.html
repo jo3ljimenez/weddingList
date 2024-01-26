@@ -153,7 +153,7 @@
                             <div class="timer_content">
                                 <div class="timer_circle" style="background-color: #FFFFFF; box-shadow: 0px 0px 3px 0px;"></div>
                                 <h2>Blanco</h2>
-                            </div>
+                            </div> 
                             <div class="timer_content">
                                 <div class="timer_circle" style="background-color: #F5F5DC; box-shadow: 0px 0px 3px 0px;"></div>
                                 <h2>Champagne</h2>
@@ -189,13 +189,13 @@
                 <!-- Datos bancarios -->
                 <div class="data_gif" style="margin-top: 0px;">
                     <h1>Datos bancarios</h1>
-                     <div class="data_bankAccount">
+                    <div class="data_bankAccount">
                         <h2>Bancoppel</h2>
                         <br>
                         <h2>Alejandra Lizarraga Higuera</h2>
                         <br>
                         <h2>4169160842629355</h2>
-                     </div>
+                    </div>
                     <br>
                     <h2 style="margin: 0px 20px;">O en la recepción podrás encontrar un baúl de sobres</h2>
                     <br>
@@ -225,26 +225,21 @@
                     onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7312.jpg')">
                 </div>
 
-                <!-- Seccion de fotografia -->
+                <!-- Seccion del formulario -->
                 <div class="middle_place" style="background-color: #8f8279;" >
-                    <div class="place_image">
-                        <img src="https://jo3ljimenez.github.io/wedding_invitation/images/camara.png" alt="">
-                    </div>
                     <div class="place_description">
-                        <h1>¡Comparte fotos!</h1>
-                        <h2>¡Queremos conservar todos los recuerdos posibles! Te dejamos este link donde puedes compartirnos tus fotos de nuestro dia especial.</h2>
+                        <h1 style="margin-bottom: 0px;">Confirmar asistencia</h1>
                     </div>
-                    <div class="location_place">                        
+                    <div class="location_place" style="display: flex; flex-direction: column; align-items: center;">
+                        <input type="text" placeholder="Nombre completo">
+                        <select name="" id="">
+                            <option value="" disabled selected hidden>¿Asistiras?</option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>                        
                         <button class="button" id="" style="border: solid 1px white; margin: 0px;"
-                        onclick="">Subir fotos</button>
-
-                        <button class="button" id="  " style="border: solid 1px white; margin: 30px;">Ver galeria</button>
+                        onclick="">Enviar Confirmacion</button>
                     </div>
-                </div>
-
-                <!-- Galeria de imagenes -->
-                <div id="carousel" class="carousel">
-                    <h1>hola</h1>
                 </div>
 
             </div>
@@ -256,14 +251,6 @@
         </li>
     </ul>
 
-    <!-- Incluye la biblioteca de Cloudinary -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.12.0/cloudinary-core-shrinkwrap.min.js"></script>
-    <!-- Incluye jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Incluye la biblioteca Slick para el carousel -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="scripts/weddingGallery.js"></script>
     <script src="scripts/timer.js"></script>
     <script src="scripts/sources.js"></script>
     <script src="scripts/fullScreen.js"></script>
