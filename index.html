@@ -8,251 +8,146 @@
 
 </head>
 <body>
-    <ul>
-        <li class="section">
+    <p>Sheets API Quickstart</p>
 
-            <div class="top_section">
-                <img class="top_image" src="https://jo3ljimenez.github.io/wedding_invitation/images/7209.jpg" alt="">
-                <div class="top_text">
-                    <h1>Alejandra & Joel Isaac</h1>
-                </div>
-            </div>
-        
-        </li>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
 
-        <li class="section">
+    <pre id="content" style="white-space: pre-wrap;"></pre>
 
-            <div class="middle_section">
-                
-                <!-- Fullscreen contenedor -->
-                <div class="fullscreen-image" id="fullscreenImage">
-                    <img id="fullscreenImageContent" src="" alt="Imagen en pantalla completa">
-                </div>
+    <script type="text/javascript">
+      /* exported gapiLoaded */
+      /* exported gisLoaded */
+      /* exported handleAuthClick */
+      /* exported handleSignoutClick */
 
-                <!-- Musica -->
-                <div class="main_music">
-                    <audio controls autoplay>
-                        <source src="https://jo3ljimenez.github.io/wedding_invitation/audio/AccidentallyInLove.mp3" type="audio/mp3">
-                    </audio>
-                </div>
+      // TODO(developer): Set to client ID and API key from the Developer Console
+      const CLIENT_ID = '954626691312-39vegkh8ouafirn3dnao3svgnirdad6l.apps.googleusercontent.com';
+      const API_KEY = 'AIzaSyA7f6HkiWYl59wLi4wXJqpvcGozCWg3Bz0';
 
-                <!-- Estas invitado -->
-                <div class="middle_description">
-                    <h1>Estás invitando</h1>
-                    <h2>Queremos que seas parte de este momento especial</h2>
-                </div>
-                
-                <!-- Temporizador -->
-                <div class="middle_timer">
-                    <div class="timer_content">
-                        <div class="timer_circle">
-                            <h2 id="days">0</h2>
-                        </div>
-                        <h4>Días</h4>
-                    </div>
-                    <div class="timer_content">
-                        <div class="timer_circle">
-                            <h2 id="hours">0</h2>
-                        </div>
-                        <h4>Horas</h4>
-                    </div>
-                    <div class="timer_content">
-                        <div class="timer_circle">
-                            <h2 id="minutes">0</h2>
-                        </div>
-                        <h4>Minutos</h4>
-                    </div>
-                    <div class="timer_content">
-                        <div class="timer_circle">
-                            <h2 id="seconds">0</h2>
-                        </div>
-                        <h4>Segundos</h4>
-                    </div>
-                </div>
+      // Discovery doc URL for APIs used by the quickstart
+      const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
 
-                <!-- Separador fotos -->
-                <div class="gallery">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7162.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7162.jpg')">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7283.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7283.jpg')">
-                </div>
-                <!-- Lugar ceremonia -->
-                <div class="middle_place">
-                    <div class="place_image">
-                        <img src="https://jo3ljimenez.github.io/wedding_invitation/images/anillos-de-boda.png" alt="">
-                    </div>
-                    <div class="place_description">
-                        <h1>Ceremonia</h1>
-                        <h2>San Blas, El Fuerte, Sinaloa</h2>
-                    </div>
-                </div>
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      const SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 
-                <!-- Fecha Ceremonia -->
-                <div class="location_date">
-                    <div class="event_day">
-                        <h2 id="event_day">9 Marzo</h2>
-                    </div>
-                    <div class="celebration_separator"></div>
-                    <div class="event_hour">
-                        <h2 id="event_hour">16:00 PM</h2>
-                    </div>
-                </div>
+      let tokenClient;
+      let gapiInited = false;
+      let gisInited = false;
 
-                <!-- Ubicacion Ceremonia -->
-                <div class="location_place">
-                    <h2>El puente colorado</h2>
-                </div>
+      document.getElementById('authorize_button').style.visibility = 'hidden';
+      document.getElementById('signout_button').style.visibility = 'hidden';
 
-                <!-- Lugar Celebracion -->
-                <div class="middle_place">
-                    <div class="place_image">
-                        <img src="https://jo3ljimenez.github.io/wedding_invitation/images/vino.png" alt="">
-                    </div>
-                    <div class="place_description">
-                        <h1>Celebración</h1>
-                        <h2>San Blas, El Fuerte, Sinaloa</h2>
-                    </div>
-                </div>
+      /**
+       * Callback after api.js is loaded.
+       */
+      function gapiLoaded() {
+        gapi.load('client', initializeGapiClient);
+      }
 
-                <!-- Fecha Celebracion -->
-                <div class="location_date">
-                    <div class="event_day">
-                        <h2 id="event_day">9 Marzo</h2>
-                    </div>
-                    <div class="celebration_separator"></div>
-                    <div class="event_hour">
-                        <h2 id="event_hour">18:00 PM</h2>
-                    </div>
-                </div>
+      /**
+       * Callback after the API client is loaded. Loads the
+       * discovery doc to initialize the API.
+       */
+      async function initializeGapiClient() {
+        await gapi.client.init({
+          apiKey: API_KEY,
+          discoveryDocs: [DISCOVERY_DOC],
+        });
+        gapiInited = true;
+        maybeEnableButtons();
+      }
 
-                <!-- Ubicacion Celebracion -->
-                <div class="location_place">
-                    <h2>El puente colorado</h2>
-                    <button class="button" id="open_map_button" 
-                    onclick="openGoogleMaps()">Ver ubicación</button>
-                </div>
+      /**
+       * Callback after Google Identity Services are loaded.
+       */
+      function gisLoaded() {
+        tokenClient = google.accounts.oauth2.initTokenClient({
+          client_id: CLIENT_ID,
+          scope: SCOPES,
+          callback: '', // defined later
+        });
+        gisInited = true;
+        maybeEnableButtons();
+      }
 
-                <!-- Separador fotos -->
-                <div class="gallery">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7116.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7116.jpg')">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7124.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7124.jpg')">
-                </div>
+      /**
+       * Enables user interaction after all libraries are loaded.
+       */
+      function maybeEnableButtons() {
+        if (gapiInited && gisInited) {
+          document.getElementById('authorize_button').style.visibility = 'visible';
+        }
+      }
 
-                <!-- Codigo vestimenta -->
-                <div class="middle_place">
-                    <div class="place_image">
-                        <img src="https://jo3ljimenez.github.io/wedding_invitation/images/ropa.png" alt="">
-                    </div>
-                    <div class="place_description">
-                        <h1>Rigurosa etiqueta</h1>
-                        <h2>Por respeto a la novia, <strong>no usar</strong> los siguientes colores</h2>
-                        <div class="middle_timer">
-                            <div class="timer_content">
-                                <div class="timer_circle" style="background-color: #FFFFFF; box-shadow: 0px 0px 3px 0px;"></div>
-                                <h2>Blanco</h2>
-                            </div> 
-                            <div class="timer_content">
-                                <div class="timer_circle" style="background-color: #F5F5DC; box-shadow: 0px 0px 3px 0px;"></div>
-                                <h2>Champagne</h2>
-                            </div>
-                            <div class="timer_content">
-                                <div class="timer_circle" style="background-color: #F7E7CE; box-shadow: 0px 0px 3px 0px;"></div>
-                                <h2>Beige</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      /**
+       *  Sign in the user upon button click.
+       */
+      function handleAuthClick() {
+        tokenClient.callback = async (resp) => {
+          if (resp.error !== undefined) {
+            throw (resp);
+          }
+          document.getElementById('signout_button').style.visibility = 'visible';
+          document.getElementById('authorize_button').innerText = 'Refresh';
+          await listMajors();
+        };
 
-                <!-- Separador fotos -->
-                <div class="gallery">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/6982.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/6982.jpg')">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7000.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7000.jpg')">
-                </div>
+        if (gapi.client.getToken() === null) {
+          // Prompt the user to select a Google Account and ask for consent to share their data
+          // when establishing a new session.
+          tokenClient.requestAccessToken({prompt: 'consent'});
+        } else {
+          // Skip display of account chooser and consent dialog for an existing session.
+          tokenClient.requestAccessToken({prompt: ''});
+        }
+      }
 
-                <!-- Regalos -->
-                <div class="middle_place">
-                    <div class="place_image">
-                        <img src="https://jo3ljimenez.github.io/wedding_invitation/images/regalo.png" alt="">
-                    </div>
-                    <div class="place_description">
-                        <h1>Regalos</h1>
-                        <h2>Tu presencia es nuestro mejor regalo, pero si es tu voluntad hacernos un regalo, 
-                            dejamos a tu disposición nuestros datos</h2>
-                    </div>
-                </div>
+      /**
+       *  Sign out the user upon button click.
+       */
+      function handleSignoutClick() {
+        const token = gapi.client.getToken();
+        if (token !== null) {
+          google.accounts.oauth2.revoke(token.access_token);
+          gapi.client.setToken('');
+          document.getElementById('content').innerText = '';
+          document.getElementById('authorize_button').innerText = 'Authorize';
+          document.getElementById('signout_button').style.visibility = 'hidden';
+        }
+      }
 
-                <!-- Datos bancarios -->
-                <div class="data_gif" style="margin-top: 0px;">
-                    <h1>Datos bancarios</h1>
-                    <div class="data_bankAccount">
-                        <h2>Bancoppel</h2>
-                        <br>
-                        <h2>Alejandra Lizarraga Higuera</h2>
-                        <br>
-                        <h2>4169160842629355</h2>
-                    </div>
-                    <br>
-                    <h2 style="margin: 0px 20px;">O en la recepción podrás encontrar un baúl de sobres</h2>
-                    <br>
-                </div>
-
-                <!-- Botones mesa de regalos -->
-                <div class="location_place" >
-                    
-                    <h2>Mesas de regalos</h2>
-                    
-                    <button class="button" id="open_map_button" style="margin: 10px 0px;"
-                    onclick="getAmazonLink()">Mesa de regalo Amazon</button>
-
-                    <button class="button" id="open_map_button" style="margin: 10px 0px;"
-                    onclick="getLiverpoolLink()">Mesa de regalo Liverpool</button>
-
-                    <!-- <button class="button" id="open_map_button" style="margin: 10px 0px;"
-                    onclick="getCoppelLink()">Mesa de regalo Coppel</button> -->
-
-                </div>
-
-                <!-- Separador fotos -->
-                <div class="gallery">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7297.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7297.jpg')">
-                    <img class="gallery_photo" src="https://jo3ljimenez.github.io/wedding_invitation/images/7312.jpg" alt="" 
-                    onclick="showFullScreen('https://jo3ljimenez.github.io/wedding_invitation/images/7312.jpg')">
-                </div>
-
-                <!-- Seccion del formulario -->
-                <div class="middle_place" style="background-color: #8f8279;" >
-                    <div class="place_description">
-                        <h1 style="margin-bottom: 0px;">Confirmar asistencia</h1>
-                    </div>
-                    <div class="location_place" style="display: flex; flex-direction: column; align-items: center;">
-                        <input type="text" placeholder="Nombre completo">
-                        <select name="" id="">
-                            <option value="" disabled selected hidden>¿Asistiras?</option>
-                            <option value="si">Si</option>
-                            <option value="no">No</option>
-                        </select>                        
-                        <button class="button" id="" style="border: solid 1px white; margin: 0px;"
-                        onclick="">Enviar Confirmacion</button>
-                    </div>
-                </div>
-
-            </div>
-
-        </li>
-
-        <li class="section">
-            bottom
-        </li>
-    </ul>
-
-    <script src="scripts/timer.js"></script>
-    <script src="scripts/sources.js"></script>
-    <script src="scripts/fullScreen.js"></script>
+      /**
+       * Print the names and majors of students in a sample spreadsheet:
+       * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+       */
+      async function listMajors() {
+        let response;
+        try {
+          // Fetch first 10 files
+          response = await gapi.client.sheets.spreadsheets.values.get({
+            spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
+            range: 'Class Data!A2:E',
+          });
+        } catch (err) {
+          document.getElementById('content').innerText = err.message;
+          return;
+        }
+        const range = response.result;
+        if (!range || !range.values || range.values.length == 0) {
+          document.getElementById('content').innerText = 'No values found.';
+          return;
+        }
+        // Flatten to string to display
+        const output = range.values.reduce(
+            (str, row) => `${str}${row[0]}, ${row[4]}\n`,
+            'Name, Major:\n');
+        document.getElementById('content').innerText = output;
+      }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 </body>
 </html>
