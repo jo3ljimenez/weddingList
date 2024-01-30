@@ -9,3 +9,4 @@ Pon atencion	SI
 Pon atencion	NO
 Ale	SI
 Johnatan barrigoso	SI
+Gerson Obed Jimenez Carrillo	SI
