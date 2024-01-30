@@ -8,3 +8,4 @@ Fox McCloud 	SI
 Pon atencion	SI
 Pon atencion	NO
 Ale	SI
+Johnatan barrigoso	SI
