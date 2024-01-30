@@ -8,3 +8,4 @@ a mimir	SI
 Yeiy	SI
 Yeiy	SI
 Yo te amo taaaaaaaaanto	SI
+test	NO
