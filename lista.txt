@@ -6,3 +6,4 @@ asda	SI
 Epa	SI
 Fox McCloud 	SI
 Pon atencion	SI
+Pon atencion	NO
