@@ -8,3 +8,4 @@ qwerqwe	NO
 epa	NO
 epa	SI
 epa2	SI
+epa2 recargado	SI
